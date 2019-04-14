@@ -19,31 +19,32 @@ rails db:create
 * Run migrations
 ```bash
 rails db:migrate
- ```
+```
 * Database Upload Sample Thermostats
-  ```bash
-  rake db:seed
- ```
+```bash
+rake db:seed
+```
 * How to run the test suite
-  ```bash
-  rspec spec
-  ```
+```bash
+rspec spec
+```
 * How to run Sidkiq
-  ```bash
-  bundle exec sidekiq
-  ```
+```bash
+bundle exec sidekiq
+```
 ## Sample Curl Requests
-  * Create Reading
-  ```curl
+
+* Create Reading
+```curl
     curl  -H 'household_token:81ed1639d2a7cad24be17a5e0724bc39' -d 'reading[thermostat_id]=1' -d 'reading[temperature]= 15' -d 'reading[humidity]=11' -d 'reading[battery_charge]=10' -X POST \http://localhost:3000/readings.json
-    ```
+```
 
-  * Show Reading
-  ```curl
+* Show Reading
+```curl
     curl  -H 'household_token:81ed1639d2a7cad24be17a5e0724bc39' -X GET \http://localhost:3000/readings/1.json
-    ```
-
-  * Therostat Stats
-  ```curl
+```
+    
+* Therostat Stats
+```curl
     curl  -H 'household_token:81ed1639d2a7cad24be17a5e0724bc39' -X GET \http://localhost:3000/thermostats/1/stats.json
-    ```
+```
