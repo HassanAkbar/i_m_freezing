@@ -7,6 +7,7 @@
 # Ignore bundler config.
 /.bundle
 tmp/
+log/
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -21,3 +22,4 @@ tmp/
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+dump.rdb
